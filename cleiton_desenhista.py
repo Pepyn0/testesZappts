@@ -21,8 +21,15 @@ def print_square(value):
                 if j == value - 1:
                     print()
 
-            elif (i == 1 or i == value - 2) and (j > 0 and j < 7):
+            elif (i == 1 or i == value - 2):
+                if i == 1 and j > 0 and j < 7:
                     print_word(word, j - 1)
+
+                elif i == value - 2 and j < value - 1 and j > value - 8:
+                    print_word(word, (j - value) + 7)
+
+                else:
+                    print(' ', end='')
             else:
                 print(' ', end='')
 
